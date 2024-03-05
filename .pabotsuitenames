@@ -1,0 +1,6 @@
+datasources:c2c5beb405ba160954a2f9676a1e970942bbb15e
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:6c279b7ace01fb627196d226ebf125d6629d7e28
+--suite Suites.Test
+--suite Suites.dataTest

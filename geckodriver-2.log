@@ -1,0 +1,25 @@
+1709547771227	geckodriver	INFO	Listening on 127.0.0.1:58275
+1709547771264	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/ts/n38rlc3j0hs9_61mjzpny8lr0000gn/T/rust_mozprofile99JceN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709547772509	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2024-03-04 21:22:52.778 plugin-container[46533:1402934] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-03-04 21:22:52.778 plugin-container[46533:1402934] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1709547772806	Marionette	INFO	Listening on port 58298
+WebDriver BiDi listening on ws://127.0.0.1:58276
+Read port: 58298
+2024-03-04 21:22:52.910 plugin-container[46533:1402934] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-03-04 21:22:52.910 plugin-container[46533:1402934] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-03-04 21:22:52.910 plugin-container[46533:1402932] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-03-04 21:22:52.910 plugin-container[46533:1402932] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1709547773174	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:58276/devtools/browser/e9220e10-b70b-4ace-8d42-601ef8555366
+2024-03-04 10:22:54.135 plugin-container[46539:1403157] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-03-04 10:22:54.135 plugin-container[46539:1403157] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-03-04 10:22:54.136 plugin-container[46539:1403157] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-03-04 10:22:54.136 plugin-container[46539:1403157] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-03-04 10:22:54.137 plugin-container[46539:1403160] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-03-04 10:22:54.137 plugin-container[46539:1403160] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1709547774215	Marionette	INFO	Stopped listening on port 58298

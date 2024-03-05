@@ -15,3 +15,8 @@ ${PASSWORD}     secret_sauce
 ${FIRSTNAME_INPUT}      Tony
 ${LASTNAME_INPUT}        Stark
 ${POSTALCODE_INPUT}      3113
+
+*** Keywords ***
+Open App In Browser
+        Open Browser    ${ENV_URL}  ${browser}
+        Maximize Browser Window

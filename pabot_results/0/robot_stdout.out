@@ -1,0 +1,20 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Test                                                                   
+==============================================================================
+Scenario 1: Verify Cart Checkout :: This test case is to login int... | PASS |
+------------------------------------------------------------------------------
+Scenario 2: Verify Add all product and remove product :: This test... | PASS |
+------------------------------------------------------------------------------
+Scenario3: Verify Product Sorting/Filtering :: This test case is t... ['Sauce Labs Fleece Jacket', 'Sauce Labs Backpack', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Bike Light', 'Sauce Labs Onesie']
+['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack']
+| PASS |
+------------------------------------------------------------------------------
+Suites.Test                                                           | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/dilipdronadula/PycharmProjects/RobotFrameworkDemoTest/pabot_results/0/output.xml

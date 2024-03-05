@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource   ../../Configs/TestConfig.robot
+Resource  ../../Resources/Resource.robot
 
 *** Variables ***
 ${USERNAME_TEXT_INPUT}        id=user-name

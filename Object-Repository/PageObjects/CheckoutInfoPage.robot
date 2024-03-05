@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource   ../../Configs/TestConfig.robot
+Resource  ../../Resources/Resource.robot
 
 *** Variables ***
 ${FIRSTNAME}    id=first-name

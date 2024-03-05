@@ -1,828 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.0 (Python 3.12.2 on darwin)" generated="2024-03-05T21:57:56.739333" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-03-05T21:57:10.307644" rpa="false" schemaversion="5">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="Test" source="/Users/dilipdronadula/PycharmProjects/RobotFrameworkDemoTest/Tests/E-CommerceTest/test.robot">
-<test id="s1-s1-t1" name="Scenario 1: Verify Cart Checkout" line="19">
-<kw name="Open App In Browser" owner="Resource" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:10.427256" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>${ENV_URL}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-05T21:57:10.426963" elapsed="9.909289"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.336992" elapsed="0.250887"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:10.426560" elapsed="10.161473"/>
-</kw>
-<kw name="Given The User Login To The Application With Credentials" owner="LoginPage">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.588926" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<arg>${USERNAME_TEXT_INPUT}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.588600" elapsed="0.095590"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.684498" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
-<arg>${PASSWORD_TEXT_INPUT}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.684326" elapsed="0.038888"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.723531" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${LOGIN_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.723352" elapsed="0.045721"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:20.588351" elapsed="0.180815"/>
-</kw>
-<kw name="When The User Adds Products To The Cart" owner="ProductsPage">
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.771398" level="INFO">Page title is 'Swag Labs'.</msg>
-<arg>Swag Labs</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.769476" elapsed="0.001969"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.771670" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
-<arg>${ADD_TO_CART_ITEM1}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.771538" elapsed="0.026770"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.798650" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
-<arg>${ADD_TO_CART_ITEM2}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.798452" elapsed="0.028256"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.826995" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
-<arg>${SHOPPING_CART}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.826846" elapsed="0.025252"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:20.769307" elapsed="0.082878"/>
-</kw>
-<kw name="And User Proceed With Checkout" owner="YourCartPage">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.852682" level="INFO">Verifying element 'class=title' contains exact text 'Your Cart'.</msg>
-<arg>${titleCartPg}</arg>
-<arg>Your Cart</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.852546" elapsed="0.012463"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.865379" level="INFO">Clicking button 'id=checkout'.</msg>
-<arg>${CHECKOUT_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.865164" elapsed="0.027120"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:20.852342" elapsed="0.040017"/>
-</kw>
-<kw name="Then User Fill Information And Continue" owner="CheckoutInfoPage">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.892787" level="INFO">Verifying element 'class=title' contains exact text 'Checkout: Your Information'.</msg>
-<arg>${titleInfoPg}</arg>
-<arg>Checkout: Your Information</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.892671" elapsed="0.008278"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.901278" level="INFO">Typing text 'Tony' into text field 'id=first-name'.</msg>
-<arg>${FIRSTNAME}</arg>
-<arg>${FIRSTNAME_INPUT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.901099" elapsed="0.052366"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.953841" level="INFO">Typing text 'Stark' into text field 'id=last-name'.</msg>
-<arg>${LASTNAME}</arg>
-<arg>${LASTNAME_INPUT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.953676" elapsed="0.036137"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:20.990102" level="INFO">Typing text '3113' into text field 'id=postal-code'.</msg>
-<arg>${POSTCODE}</arg>
-<arg>${POSTALCODE_INPUT}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:20.989944" elapsed="0.042764"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.032991" level="INFO">Clicking button 'id=continue'.</msg>
-<arg>${CONTINUE_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.032836" elapsed="0.029100"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:20.892497" elapsed="0.169515"/>
-</kw>
-<kw name="And User Verify Checkout Overview and Complete" owner="CheckoutOverviewPage">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.063600" level="INFO">Verifying element 'class=title' contains exact text 'Checkout: Overview'.</msg>
-<arg>${titleOverviewPg}</arg>
-<arg>Checkout: Overview</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.062830" elapsed="0.007596"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.070693" level="INFO">Clicking button 'id=finish'.</msg>
-<arg>${FINISH_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.070546" elapsed="0.023461"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:21.062162" elapsed="0.031913"/>
-</kw>
-<kw name="Then User Should See Checkout Complete Message" owner="CheckoutCompletePage">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.094471" level="INFO">Verifying element 'class=title' contains exact text 'Checkout: Complete!'.</msg>
-<arg>${titleCompletePg}</arg>
-<arg>Checkout: Complete!</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.094366" elapsed="0.006602"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.101253" level="INFO">Verifying element 'class=complete-header' contains exact text 'Thank you for your order!'.</msg>
-<arg>${headerCompletePg}</arg>
-<arg>Thank you for your order!</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.101097" elapsed="0.007027"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.108376" level="INFO">Clicking button 'id=back-to-products'.</msg>
-<arg>${BACK_HOME_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.108234" elapsed="0.052116"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:21.094204" elapsed="0.066251"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.160699" elapsed="0.072985"/>
-</kw>
-<doc>This test case is to login into portal, add products to cart, fill information and checkout</doc>
-<tag>Sanity</tag>
-<status status="PASS" start="2024-03-05T21:57:10.426192" elapsed="10.807571"/>
-</test>
-<test id="s1-s1-t2" name="Scenario 2: Verify Add all product and remove product" line="29">
-<kw name="Open App In Browser" owner="Resource" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:21.234785" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>${ENV_URL}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-05T21:57:21.234666" elapsed="3.957743"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.193098" elapsed="0.270280"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:21.234491" elapsed="4.229044"/>
-</kw>
-<kw name="Given The User Login To The Application With Credentials" owner="LoginPage">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.464493" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<arg>${USERNAME_TEXT_INPUT}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.464240" elapsed="0.084235"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.548790" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
-<arg>${PASSWORD_TEXT_INPUT}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.548610" elapsed="0.042147"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.591072" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${LOGIN_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.590894" elapsed="0.039715"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:25.463931" elapsed="0.166896"/>
-</kw>
-<kw name="And User Adds Items Below Into Shoping Cart" owner="ProductsPage">
-<for flavor="IN">
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.632074" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Backpack']/../../..//button[contains(text(),'Add to cart')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Add to cart')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.631865" elapsed="0.000229"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.632922" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Backpack']/../../..//button[contains(text(),'Add to cart')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.632453" elapsed="0.030613"/>
-</kw>
-<var name="${item_name}">Sauce Labs Backpack</var>
-<status status="PASS" start="2024-03-05T21:57:25.631745" elapsed="0.031408"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.664789" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bike Light']/../../..//button[contains(text(),'Add to cart')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Add to cart')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.664643" elapsed="0.000165"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.664974" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bike Light']/../../..//button[contains(text(),'Add to cart')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.664874" elapsed="0.024253"/>
-</kw>
-<var name="${item_name}">Sauce Labs Bike Light</var>
-<status status="PASS" start="2024-03-05T21:57:25.664508" elapsed="0.024684"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.689510" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bolt T-Shirt']/../../..//button[contains(text(),'Add to cart')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Add to cart')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.689390" elapsed="0.000137"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.689892" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bolt T-Shirt']/../../..//button[contains(text(),'Add to cart')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.689592" elapsed="0.030243"/>
-</kw>
-<var name="${item_name}">Sauce Labs Bolt T-Shirt</var>
-<status status="PASS" start="2024-03-05T21:57:25.689288" elapsed="0.030605"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.723636" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Fleece Jacket']/../../..//button[contains(text(),'Add to cart')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Add to cart')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.723172" elapsed="0.000488"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.723886" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Fleece Jacket']/../../..//button[contains(text(),'Add to cart')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.723765" elapsed="0.043538"/>
-</kw>
-<var name="${item_name}">Sauce Labs Fleece Jacket</var>
-<status status="PASS" start="2024-03-05T21:57:25.719976" elapsed="0.047388"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.767670" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Onesie']/../../..//button[contains(text(),'Add to cart')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Add to cart')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.767555" elapsed="0.027018"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.795052" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Onesie']/../../..//button[contains(text(),'Add to cart')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.794851" elapsed="0.025459"/>
-</kw>
-<var name="${item_name}">Sauce Labs Onesie</var>
-<status status="PASS" start="2024-03-05T21:57:25.767451" elapsed="0.052926"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.820713" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Test.allTheThings() T-Shirt (Red)']/../../..//button[contains(text(),'Add to cart')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Add to cart')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.820592" elapsed="0.000142"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.820893" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Test.allTheThings() T-Shirt (Red)']/../../..//button[contains(text(),'Add to cart')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.820798" elapsed="0.022042"/>
-</kw>
-<var name="${item_name}">Test.allTheThings() T-Shirt (Red)</var>
-<status status="PASS" start="2024-03-05T21:57:25.820472" elapsed="0.022429"/>
-</iter>
-<var>${item_name}</var>
-<value>@{item_list}</value>
-<status status="PASS" start="2024-03-05T21:57:25.631471" elapsed="0.211464"/>
-</for>
-<arg>Sauce Labs Backpack</arg>
-<arg>Sauce Labs Bike Light</arg>
-<arg>Sauce Labs Bolt T-Shirt</arg>
-<arg>Sauce Labs Fleece Jacket</arg>
-<arg>Sauce Labs Onesie</arg>
-<arg>Test.allTheThings() T-Shirt (Red)</arg>
-<status status="PASS" start="2024-03-05T21:57:25.631027" elapsed="0.211960"/>
-</kw>
-<kw name="Then User Removes Items Below From Shoping Cart" owner="ProductsPage">
-<for flavor="IN">
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.843528" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Backpack']/../../..//button[contains(text(),'Remove')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Remove')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.843441" elapsed="0.000102"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.843685" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Backpack']/../../..//button[contains(text(),'Remove')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.843599" elapsed="0.023589"/>
-</kw>
-<var name="${item_name}">Sauce Labs Backpack</var>
-<status status="PASS" start="2024-03-05T21:57:25.843383" elapsed="0.023864"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.867535" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bike Light']/../../..//button[contains(text(),'Remove')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Remove')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.867424" elapsed="0.000128"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.867710" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bike Light']/../../..//button[contains(text(),'Remove')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.867609" elapsed="0.024512"/>
-</kw>
-<var name="${item_name}">Sauce Labs Bike Light</var>
-<status status="PASS" start="2024-03-05T21:57:25.867327" elapsed="0.024860"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.892493" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bolt T-Shirt']/../../..//button[contains(text(),'Remove')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Remove')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.892378" elapsed="0.000131"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.892664" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Bolt T-Shirt']/../../..//button[contains(text(),'Remove')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.892569" elapsed="0.023092"/>
-</kw>
-<var name="${item_name}">Sauce Labs Bolt T-Shirt</var>
-<status status="PASS" start="2024-03-05T21:57:25.892273" elapsed="0.023445"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.916004" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Fleece Jacket']/../../..//button[contains(text(),'Remove')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Remove')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.915894" elapsed="0.000125"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.916161" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Fleece Jacket']/../../..//button[contains(text(),'Remove')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.916075" elapsed="0.026643"/>
-</kw>
-<var name="${item_name}">Sauce Labs Fleece Jacket</var>
-<status status="PASS" start="2024-03-05T21:57:25.915799" elapsed="0.026986"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.943135" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Onesie']/../../..//button[contains(text(),'Remove')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Remove')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.943005" elapsed="0.000147"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.943329" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Sauce Labs Onesie']/../../..//button[contains(text(),'Remove')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.943217" elapsed="0.025706"/>
-</kw>
-<var name="${item_name}">Sauce Labs Onesie</var>
-<status status="PASS" start="2024-03-05T21:57:25.942884" elapsed="0.026110"/>
-</iter>
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:25.969420" level="INFO">${ADD_REMOVE_CART_LOCATOR} = //div[contains(@class, 'inventory_item_name')][text()='Test.allTheThings() T-Shirt (Red)']/../../..//button[contains(text(),'Remove')]</msg>
-<var>${ADD_REMOVE_CART_LOCATOR}</var>
-<arg>//div[contains(@class, 'inventory_item_name')][text()='${item_name}']/../../..//button[contains(text(),'Remove')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.969253" elapsed="0.000186"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:25.969637" level="INFO">Clicking button '//div[contains(@class, 'inventory_item_name')][text()='Test.allTheThings() T-Shirt (Red)']/../../..//button[contains(text(),'Remove')]'.</msg>
-<arg>${ADD_REMOVE_CART_LOCATOR}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.969533" elapsed="0.021355"/>
-</kw>
-<var name="${item_name}">Test.allTheThings() T-Shirt (Red)</var>
-<status status="PASS" start="2024-03-05T21:57:25.969150" elapsed="0.021797"/>
-</iter>
-<var>${item_name}</var>
-<value>@{item_list}</value>
-<status status="PASS" start="2024-03-05T21:57:25.843309" elapsed="0.147673"/>
-</for>
-<arg>Sauce Labs Backpack</arg>
-<arg>Sauce Labs Bike Light</arg>
-<arg>Sauce Labs Bolt T-Shirt</arg>
-<arg>Sauce Labs Fleece Jacket</arg>
-<arg>Sauce Labs Onesie</arg>
-<arg>Test.allTheThings() T-Shirt (Red)</arg>
-<status status="PASS" start="2024-03-05T21:57:25.843146" elapsed="0.147884"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-05T21:57:25.991177" elapsed="0.070938"/>
-</kw>
-<doc>This test case is to login into portal, add products to cart, and remove products from cart</doc>
-<tag>Smoke</tag>
-<status status="PASS" start="2024-03-05T21:57:21.234153" elapsed="4.828040"/>
-</test>
-<test id="s1-s1-t3" name="Scenario3: Verify Product Sorting/Filtering" line="39">
-<kw name="Open App In Browser" owner="Resource" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:26.063143" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>${ENV_URL}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-05T21:57:26.062971" elapsed="3.294665"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.363372" elapsed="0.282553"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:26.062728" elapsed="3.583349"/>
-</kw>
-<kw name="Given The User Login To The Application With Credentials" owner="LoginPage">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.647005" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<arg>${USERNAME_TEXT_INPUT}</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.646762" elapsed="0.079401"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.726492" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
-<arg>${PASSWORD_TEXT_INPUT}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.726294" elapsed="0.034103"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.760670" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>${LOGIN_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.760514" elapsed="0.033900"/>
-</kw>
-<status status="PASS" start="2024-03-05T21:57:29.646468" elapsed="0.148022"/>
-</kw>
-<kw name="And User Select The Sort Type" owner="ProductsPage">
-<for flavor="IN">
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:29.795139" level="INFO">${SELECT_SORT_TYPE} = xpath=//select[contains(@class, 'product_sort_container')]//option[text()='Price (high to low)']</msg>
-<var>${SELECT_SORT_TYPE}</var>
-<arg>xpath=//select[contains(@class, 'product_sort_container')]//option[text()='${sort_name}']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.795014" elapsed="0.000143"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.795319" level="INFO">Clicking element 'xpath=//select[contains(@class, 'product_sort_container')]//option[text()='Price (high to low)']'.</msg>
-<arg>${SELECT_SORT_TYPE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.795224" elapsed="0.039037"/>
-</kw>
-<var name="${sort_name}">Price (high to low)</var>
-<status status="PASS" start="2024-03-05T21:57:29.794923" elapsed="0.039401"/>
-</iter>
-<var>${sort_name}</var>
-<value>@{sort_type}</value>
-<status status="PASS" start="2024-03-05T21:57:29.794832" elapsed="0.039601"/>
-</for>
-<arg>Price (high to low)</arg>
-<status status="PASS" start="2024-03-05T21:57:29.794657" elapsed="0.040072"/>
-</kw>
-<kw name="Then User Verify The Sort List" owner="ProductsPage">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-03-05T21:57:29.835817" level="INFO">@{ItemNameList} = [ ]</msg>
-<var>@{ItemNameList}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.835680" elapsed="0.000156"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.841659" level="INFO">@{ItemName} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.25")&gt; | &lt;selenium.webdr...</msg>
-<var>@{ItemName}</var>
-<arg>@{INV_ITEM_NAME}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.835906" elapsed="0.005788"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.848150" level="INFO">${GetInventoryText} = Sauce Labs Fleece Jacket</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.842008" elapsed="0.006169"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.848306" elapsed="0.000131"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.25")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.841898" elapsed="0.006566"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.852331" level="INFO">${GetInventoryText} = Sauce Labs Backpack</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.848597" elapsed="0.003762"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.852478" elapsed="0.000120"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.36")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.848540" elapsed="0.009968"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.866521" level="INFO">${GetInventoryText} = Sauce Labs Bolt T-Shirt</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.858791" elapsed="0.007761"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.866675" elapsed="0.000134"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.37")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.858670" elapsed="0.008174"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.870558" level="INFO">${GetInventoryText} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.866978" elapsed="0.003607"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.870702" elapsed="0.000116"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.27")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.866917" elapsed="0.003933"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.874835" level="INFO">${GetInventoryText} = Sauce Labs Bike Light</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.870974" elapsed="0.003891"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.874982" elapsed="0.000133"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.38")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.870917" elapsed="0.004225"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.879258" level="INFO">${GetInventoryText} = Sauce Labs Onesie</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.875287" elapsed="0.004008"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.879423" elapsed="0.000121"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.39")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.875216" elapsed="0.004356"/>
-</iter>
-<var>${each}</var>
-<value>@{ItemName}</value>
-<status status="PASS" start="2024-03-05T21:57:29.841758" elapsed="0.037848"/>
-</for>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${ItemNameList}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.879680" elapsed="0.015639"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2024-03-05T21:57:29.895629" level="INFO">Argument types are:
-&lt;class 'list'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${ItemNameList}</arg>
-<arg>@{sort_Text}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.895481" elapsed="0.000181"/>
-</kw>
-<arg>${PriceHighLowList}</arg>
-<status status="PASS" start="2024-03-05T21:57:29.835118" elapsed="0.060584"/>
-</kw>
-<kw name="And User Select The Sort Type" owner="ProductsPage">
-<for flavor="IN">
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-05T21:57:29.896244" level="INFO">${SELECT_SORT_TYPE} = xpath=//select[contains(@class, 'product_sort_container')]//option[text()='Name (Z to A)']</msg>
-<var>${SELECT_SORT_TYPE}</var>
-<arg>xpath=//select[contains(@class, 'product_sort_container')]//option[text()='${sort_name}']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.896089" elapsed="0.000187"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.896501" level="INFO">Clicking element 'xpath=//select[contains(@class, 'product_sort_container')]//option[text()='Name (Z to A)']'.</msg>
-<arg>${SELECT_SORT_TYPE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.896356" elapsed="0.017472"/>
-</kw>
-<var name="${sort_name}">Name (Z to A)</var>
-<status status="PASS" start="2024-03-05T21:57:29.896027" elapsed="0.017930"/>
-</iter>
-<var>${sort_name}</var>
-<value>@{sort_type}</value>
-<status status="PASS" start="2024-03-05T21:57:29.895951" elapsed="0.018049"/>
-</for>
-<arg>Name (Z to A)</arg>
-<status status="PASS" start="2024-03-05T21:57:29.895827" elapsed="0.018240"/>
-</kw>
-<kw name="Then User Verify The Sort List" owner="ProductsPage">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-03-05T21:57:29.914632" level="INFO">@{ItemNameList} = [ ]</msg>
-<var>@{ItemNameList}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.914497" elapsed="0.000154"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.919066" level="INFO">@{ItemName} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.27")&gt; | &lt;selenium.webdr...</msg>
-<var>@{ItemName}</var>
-<arg>@{INV_ITEM_NAME}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.914723" elapsed="0.004377"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.923151" level="INFO">${GetInventoryText} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.919365" elapsed="0.003820"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.923300" elapsed="0.000112"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.27")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.919280" elapsed="0.004165"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.927073" level="INFO">${GetInventoryText} = Sauce Labs Onesie</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.923572" elapsed="0.003572"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.927252" elapsed="0.000104"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.39")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.923514" elapsed="0.003869"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.931025" level="INFO">${GetInventoryText} = Sauce Labs Fleece Jacket</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.927506" elapsed="0.003547"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.931162" elapsed="0.000116"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.25")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.927449" elapsed="0.003857"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.934427" level="INFO">${GetInventoryText} = Sauce Labs Bolt T-Shirt</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.931432" elapsed="0.003016"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.934534" elapsed="0.000089"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.37")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.931375" elapsed="0.003275"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.938587" level="INFO">${GetInventoryText} = Sauce Labs Bike Light</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.934767" elapsed="0.003850"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.938817" elapsed="0.000211"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.38")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.934714" elapsed="0.004345"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-05T21:57:29.945012" level="INFO">${GetInventoryText} = Sauce Labs Backpack</msg>
-<var>${GetInventoryText}</var>
-<arg>${each}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.939192" elapsed="0.005848"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${ItemNameList}</arg>
-<arg>${GetInventoryText}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.945144" elapsed="0.000108"/>
-</kw>
-<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b53a7687e5f9c0b2ee07ca53c6f8ed3a", element="f.02E8C7F6E26A5DC218ACCA786211BAF5.d.34804350C271211E0FE802D265485601.e.36")&gt;</var>
-<status status="PASS" start="2024-03-05T21:57:29.939134" elapsed="0.006144"/>
-</iter>
-<var>${each}</var>
-<value>@{ItemName}</value>
-<status status="PASS" start="2024-03-05T21:57:29.919167" elapsed="0.026144"/>
-</for>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${ItemNameList}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.945384" elapsed="0.000093"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2024-03-05T21:57:29.945606" level="INFO">Argument types are:
-&lt;class 'list'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${ItemNameList}</arg>
-<arg>@{sort_Text}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.945532" elapsed="0.000098"/>
-</kw>
-<arg>${Reverselist}</arg>
-<status status="PASS" start="2024-03-05T21:57:29.914271" elapsed="0.031438"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-05T21:57:29.945817" elapsed="0.070432"/>
-</kw>
-<doc>This test case is to verify sorting of products</doc>
-<tag>Regression</tag>
-<status status="PASS" start="2024-03-05T21:57:26.062466" elapsed="3.953865"/>
-</test>
-<status status="PASS" start="2024-03-05T21:57:10.318000" elapsed="19.698081"/>
-</suite>
-<suite id="s1-s2" name="dataTest" source="/Users/dilipdronadula/PycharmProjects/RobotFrameworkDemoTest/Tests/E-CommerceTest/dataTest.robot">
-<test id="s1-s2-t1" name="Add Remove Items From Excel" line="17">
+<suite id="s1-s1" name="dataTest" source="/Users/dilipdronadula/PycharmProjects/RobotFrameworkDemoTest/Tests/E-CommerceTest/dataTest.robot">
+<test id="s1-s1-t1" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:12.545320" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -906,7 +86,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:12.543986" elapsed="8.377939"/>
 </test>
-<test id="s1-s2-t2" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t2" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:20.923901" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -990,7 +170,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:20.922842" elapsed="5.013154"/>
 </test>
-<test id="s1-s2-t3" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t3" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:25.937599" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1074,7 +254,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:25.936406" elapsed="3.971901"/>
 </test>
-<test id="s1-s2-t4" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t4" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:29.911061" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1158,7 +338,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:29.909842" elapsed="2.766405"/>
 </test>
-<test id="s1-s2-t5" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t5" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:32.677602" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1242,7 +422,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:32.676577" elapsed="2.717549"/>
 </test>
-<test id="s1-s2-t6" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t6" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:35.396359" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1326,7 +506,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:35.394796" elapsed="3.609981"/>
 </test>
-<test id="s1-s2-t7" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t7" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:39.007175" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1410,7 +590,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:39.005613" elapsed="2.795081"/>
 </test>
-<test id="s1-s2-t8" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t8" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:41.802643" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1494,7 +674,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:41.801452" elapsed="3.722866"/>
 </test>
-<test id="s1-s2-t9" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t9" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:45.525649" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1578,7 +758,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:45.524650" elapsed="2.780345"/>
 </test>
-<test id="s1-s2-t10" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t10" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:48.306761" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1662,7 +842,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:48.305710" elapsed="2.549099"/>
 </test>
-<test id="s1-s2-t11" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t11" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:50.856179" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1746,7 +926,7 @@
 </kw>
 <status status="PASS" start="2024-03-05T21:57:50.855130" elapsed="2.933501"/>
 </test>
-<test id="s1-s2-t12" name="Add Remove Items From Excel" line="17">
+<test id="s1-s1-t12" name="Add Remove Items From Excel" line="17">
 <kw name="Open my Browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2024-03-05T21:57:53.790618" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
@@ -1832,22 +1012,17 @@
 </test>
 <status status="PASS" start="2024-03-05T21:57:10.318719" elapsed="46.131033"/>
 </suite>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
-<status status="PASS" start="2024-03-05T21:57:10.311000" elapsed="19.705855"/>
+<status status="PASS" start="2024-03-05T21:57:10.311313" elapsed="46.139468"/>
 </suite>
 <statistics>
 <total>
-<stat pass="15" fail="0" skip="0">All Tests</stat>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Regression</stat>
-<stat pass="1" fail="0" skip="0">Sanity</stat>
-<stat pass="1" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="15" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Test">Suites.Test</stat>
-<stat pass="12" fail="0" skip="0" id="s1-s2" name="dataTest">Suites.dataTest</stat>
+<stat pass="12" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="12" fail="0" skip="0" id="s1-s1" name="dataTest">Suites.dataTest</stat>
 </suite>
 </statistics>
 <errors>
